@@ -7,7 +7,7 @@ const initState: Trip = {
   id: 0,
   flights: [],
   activities: [],
-  userIds: [],
+  users: [],
   name: '',
   imageUrl: ''
 }

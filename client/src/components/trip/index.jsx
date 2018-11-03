@@ -30,7 +30,11 @@ export class TripView extends PureComponent<TripViewProps> {
   }
 
   render () {
-    const { flights, activities } = this.props
+    const {
+      flights,
+      activities,
+      users
+    } = this.props
 
     const events = eventUtil.mergeByStartTime(flights, activities)
 
@@ -41,12 +45,16 @@ export class TripView extends PureComponent<TripViewProps> {
             eventUtil.isFlight(event)
               ? (
                 <Grid key={idx} item xs={12}>
-                  <FlightPreview flight={eventUtil.eventToFlight(event)} />
+                  <FlightPreview
+                    users={users}
+                    flight={eventUtil.eventToFlight(event)} />
                 </Grid>
               )
               : (
                 <Grid key={idx} item xs={12}>
-                  <ActivityPreview activity={eventUtil.eventToActivity(event)} />
+                  <ActivityPreview
+                    users={users}
+                    activity={eventUtil.eventToActivity(event)} />
                 </Grid>
               )
           ))

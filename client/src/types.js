@@ -37,7 +37,7 @@ export type Trip = {
   id: number,
   flights: Flight[],
   activities: Activity[],
-  userIds: number[],
+  users: User[],
   name: string,
   imageUrl: string
 }

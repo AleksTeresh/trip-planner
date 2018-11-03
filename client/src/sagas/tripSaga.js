@@ -39,7 +39,14 @@ function * fetchTrip (action) {
           placeId: 'Costa Adeje'
         }
       ],
-      userIds: [0, 1, 2, 3, 4, 5],
+      users: [
+        { id: 0, name: 'John Doe', avatarUrl: '' },
+        { id: 1, name: 'Jane Doe', avatarUrl: '' },
+        { id: 2, name: 'Martin Doe', avatarUrl: '' },
+        { id: 3, name: 'Amanda Doe', avatarUrl: '' },
+        { id: 4, name: 'Khan Doe', avatarUrl: '' },
+        { id: 5, name: 'Josefine Doe', avatarUrl: '' }
+      ],
       name: 'Tenerife hedonism escape',
       imageUrl: ''
     }
