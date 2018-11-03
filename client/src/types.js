@@ -2,11 +2,11 @@
 
 export type Activity = {
   id: number,
+  name: string,
   startTime: Date,
   endTime: Date,
   userIds: number[],
-  placeId: string,
-  userIds: number[]
+  placeId: string
 }
 
 export type FlightSeat = {
@@ -22,8 +22,10 @@ export type Flight = {
   userIds: number[],
   terminal: string,
   gate: string,
-  seat: FlightSeat[]
+  seat: string
 }
+
+export type Event = Flight | Activity
 
 export type User = {
   id: number,
@@ -33,7 +35,20 @@ export type User = {
 
 export type Trip = {
   id: number,
-  eventIds: number[],
+  flights: Flight[],
+  activities: Activity[],
   userIds: number[],
-  name: string
+  name: string,
+  imageUrl: string
+}
+
+export type TripShort = {
+  id: number,
+  name: string,
+  imageUrl: string
+}
+
+export type AppState = {
+  trips: TripShort[],
+  trip: Trip
 }
