@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "../assets/.eslintrc"
-  ],
-  "rules": {
-    "eol-last": [0]
-  }
-}
